@@ -1,11 +1,24 @@
 import { useContext } from "react";
-import {  Link, NavLink } from "react-router-dom";
+import {  Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Page/FirebaseProvider/FirebaseProvider";
 import { BsPerson } from "react-icons/bs";
 
 
 const Navbar = () => {
-    const { user } = useContext(AuthContext);
+    const { signout, user } = useContext(AuthContext);
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location?.state || '/'
+
+    const handlesociallogout = logoutProvider => {
+        logoutProvider()
+            .then(result => {
+                // toast("Success register!");
+                if (result.user) {
+                    navigate(from)
+                }
+            })
+    }
 
     const Navbar = <>
         <li><NavLink to='/' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Home</NavLink></li>
@@ -74,8 +87,7 @@ const Navbar = () => {
                                     </summary>
                                     <ul className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-32  md:text-lg absolute z-10">
                                         <li className="hover:text-[#f05431da]"><Link to={'/profile'}>Profile</Link></li>
-                                        <li className="hover:text-[#f05431da]"><Link>Logout</Link></li>
-                                        {/* onClick={() => handlesociallogout(signout)} */}
+                                        <li className="hover:text-[#f05431da]" onClick={() => handlesociallogout(signout)}><Link>Logout</Link></li>
                                     </ul>
                                 </details>
                                 

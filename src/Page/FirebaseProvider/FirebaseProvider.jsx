@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from './../../Firebase/firebase.config';
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth/cordova";
@@ -40,6 +40,13 @@ const FirebaseProvider = ({children}) => {
         return signInWithPopup(auth, GithubProvider)
     }
 
+    // Sign out
+    const signout = () =>{
+        setloading(true)
+        setuser(null)
+        return signOut(auth)
+    }
+
 
     // Obserber
     useEffect(() =>{
@@ -58,7 +65,8 @@ const FirebaseProvider = ({children}) => {
         signup,
         signin,
         googlelogin,
-        githublogin
+        githublogin,
+        signout
     }
     return (
         <div>
