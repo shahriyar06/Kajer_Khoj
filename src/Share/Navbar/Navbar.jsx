@@ -1,7 +1,11 @@
-import {  NavLink } from "react-router-dom";
+import { useContext } from "react";
+import {  Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Page/FirebaseProvider/FirebaseProvider";
+import { BsPerson } from "react-icons/bs";
 
 
 const Navbar = () => {
+    const { user } = useContext(AuthContext);
 
     const Navbar = <>
         <li><NavLink to='/' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Home</NavLink></li>
@@ -59,7 +63,7 @@ const Navbar = () => {
                             </svg>
                         </label>
                     </div>
-                    {/* {
+                    {
                         user ?
                             <div className=" relative">
                                 <details className="dropdown dropdown-end">
@@ -70,7 +74,8 @@ const Navbar = () => {
                                     </summary>
                                     <ul className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-32  md:text-lg absolute z-10">
                                         <li className="hover:text-[#f05431da]"><Link to={'/profile'}>Profile</Link></li>
-                                        <li className="hover:text-[#f05431da]" onClick={() => handlesociallogout(signout)}><Link>Logout</Link></li>
+                                        <li className="hover:text-[#f05431da]"><Link>Logout</Link></li>
+                                        {/* onClick={() => handlesociallogout(signout)} */}
                                     </ul>
                                 </details>
                                 
@@ -89,7 +94,7 @@ const Navbar = () => {
                                     </ul>
                                 </details>
                             </div>
-                    } */}
+                    }
                 </div>
             </div>
         </div>
