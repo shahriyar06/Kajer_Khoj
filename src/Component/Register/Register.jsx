@@ -54,7 +54,7 @@ const Register = () => {
     return (
         <div className="mb-10 mx-2 md:mx-0">
             <Helmet>
-                <title>kajer-khoj-register</title>
+                <title>Kajer khoj | register</title>
             </Helmet>
             <div className="hero min-h-screen ">
                 <div className="card shrink-0 w-full max-w-lg shadow-2xl bg-base-100">

@@ -6,6 +6,8 @@ import AllJobs from "../Page/AllJobs/AllJobs";
 import Blogs from "../Page/Blogs/Blogs";
 import Login from "../Component/Login/Login";
 import Register from "../Component/Register/Register";
+import PrivateRoute from "../Page/PrivateRoute/PrivateRoute";
+import AddJob from "../Page/AddJob/AddJob";
 
 
 
@@ -34,6 +36,10 @@ const router = createBrowserRouter([
         {
             path: '/register',
             element: <Register></Register>
+        },
+        {
+            path: '/addjob',
+            element: <PrivateRoute><AddJob></AddJob></PrivateRoute>
         }
       ],
     },

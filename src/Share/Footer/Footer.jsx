@@ -1,6 +1,7 @@
 import { MdOutlinePhoneIphone, MdOutlineMailOutline, MdOutlineCopyright } from "react-icons/md";
 import { GoPlus } from "react-icons/go";
 import { FaPhoneAlt, FaInstagram, FaLinkedinIn, FaTwitter, FaFacebookF } from "react-icons/fa";
+import logo from '../../../public/Image/Screenshot_2024-05-11_221127-removebg-preview.png'
 
 const Footer = () => {
     return (
@@ -8,7 +9,8 @@ const Footer = () => {
             <div className="w-11/12 mx-auto p-6">
                 <div className="mt-10 lg:grid lg:grid-cols-9 gap-9">
                     <div className="mb-8 lg:col-span-3">
-                        <h1 className="text-[#FFFFFF] text-4xl font-bold mb-5">Kajer Khoj</h1>
+                        <img src={logo} className="w-72 items-start" />
+                        {/* <h1 className="text-[#FFFFFF] text-4xl font-bold mb-5">Kajer Khoj</h1> */}
                         <p className="text-[#888] text-lg lg:text-xl lg:w-3/4">Discover job opportunities and post job requirements effortlessly on our interactive platform for seamless career advancement. Join us today!</p>
                     </div>
                     <div className="mb-8 lg:col-span-2">

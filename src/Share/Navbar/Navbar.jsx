@@ -24,6 +24,7 @@ const Navbar = () => {
         <li><NavLink to='/' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Home</NavLink></li>
         <li><NavLink to='/alljobs' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>All Jobs</NavLink></li>
         <li><NavLink to='/blogs' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Blogs</NavLink></li>
+        <li><NavLink to='/addjob' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Add Job</NavLink></li>
         {/* {
             user && <li><NavLink to='/addcraft' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Add Craft</NavLink></li>
         } */}
