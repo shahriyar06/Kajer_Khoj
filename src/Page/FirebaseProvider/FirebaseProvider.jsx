@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from './../../Firebase/firebase.config';
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth/cordova";
@@ -48,6 +48,15 @@ const FirebaseProvider = ({children}) => {
     }
 
 
+    // Updateuser
+    const updateuserprofile = (name, image) =>{
+        return updateProfile(auth.currentUser, {
+            displayName: name, 
+            photoURL: image,
+          })
+    }
+
+
     // Obserber
     useEffect(() =>{
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -66,7 +75,8 @@ const FirebaseProvider = ({children}) => {
         signin,
         googlelogin,
         githublogin,
-        signout
+        signout,
+        updateuserprofile
     }
     return (
         <div>
