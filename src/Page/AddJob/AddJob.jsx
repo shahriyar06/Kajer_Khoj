@@ -31,28 +31,28 @@ const AddJob = () => {
 
         const jobPost = { name, email, jobtitle, jobcategory, imageurl, description, salaryrange, jobapplicants, jobpostdate, applicationdeadline }
 
-        console.log(jobPost)
+        // console.log(jobPost)
         // set data to server
-        // fetch('', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(newcraft)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         if (data.insertedId) {
-        //             Swal.fire({
-        //                 title: 'Success!',
-        //                 text: 'Craft Item Added Successfully',
-        //                 icon: 'success',
-        //                 confirmButtonText: 'Done'
-        //             })
-        //             form.reset();
-        //         }
-        //     })
+        fetch('http://localhost:5000/joblist', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(jobPost)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'New Job Added Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Done'
+                    })
+                    form.reset();
+                }
+            })
 
     }
 
@@ -66,7 +66,7 @@ const AddJob = () => {
                 <div className="card card-side glass flex flex-col w-10/12 mx-auto p-12">
                     <div>
                         <h1 className="text-center lg:text-5xl text-3xl font-bold text-[#a7542dc7]">Add Job</h1>
-                        <p className="text-center my-5 text-xl">Craft your legacy in our Collection! Introduce your artisanal marvels.Describe your masterpiece and add images to exhibit your craftsmanship to the world.</p>
+                        <p className="text-center my-5 text-xl w-11/12 mx-auto">Post new job opportunities on our platform! Reach potential candidates and grow your team effortlessly. Join us in shaping careers today.</p>
                     </div>
                     <div>
                         <form onSubmit={handlesubmitjob} className="">
@@ -136,17 +136,17 @@ const AddJob = () => {
                                 </div>
                             </div>
                             {/* Posting Date and Deadline Date */}
-                            <div className="md:flex gap-6 justify-between">
+                            <div className="lg:flex gap-6 justify-between">
                                 <div className="w-full">
                                     <label className="label">
                                         <span className="label-text text-lg font-medium">Posting Date</span>
                                     </label>
-                                    <div className="w-full flex gap-6 items-center">
+                                    <div className="flex gap-6 items-center">
                                         <FaCalendarDays className=" text-2xl" />
                                         <DatePicker
                                             selected={startDate}
                                             onChange={(date) => setStartDate(date)}
-                                            className=" w-[430px] rounded-lg h-12 border-b-2 border-b-[#ffffffa7] bg-transparent text-[#080808] items-center text-center flex"
+                                            className="lg:w-[430px] rounded-lg h-12 border-b-2 border-b-[#ffffffa7] bg-transparent text-[#080808] items-center text-center flex"
                                             disabled
                                         />
                                     </div>
@@ -155,12 +155,12 @@ const AddJob = () => {
                                     <label className="label">
                                         <span className="label-text text-lg font-medium">Applicantion Deadline</span>
                                     </label>
-                                    <div className="w-full flex gap-6 items-center">
+                                    <div className="flex gap-6 items-center">
                                         <FaCalendarDays className=" text-2xl" />
                                         <DatePicker
                                             selected={deadlineDate}
                                             onChange={(date) => setdeadlineDate(date)}
-                                            className="w-[430px] rounded-lg h-12 border-b-2 border-b-[#ffffffa7] bg-transparent text-[#080808] items-center text-center flex"
+                                            className="lg:w-[430px] md:w-[300px] rounded-lg h-12 border-b-2 border-b-[#ffffffa7] bg-transparent text-[#080808] items-center text-center flex"
                                         />
                                     </div>
                                 </div>
