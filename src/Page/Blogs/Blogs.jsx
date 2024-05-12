@@ -56,7 +56,7 @@ const Blogs = () => {
             <div className="flex gap-7 flex-row-reverse items-center mb-20">
                 <div className="text-lg w-1/2">
                     <div>
-                        <h1 className="text-3xl font-semibold mb-4">Express JS :</h1>
+                        <h1 className="text-3xl font-semibold mb-4">Nest JS :</h1>
                         <p className="mb-6">
                             NestJS is a progressive Node.js framework for building efficient, reliable, and scalable server-side applications. It is heavily inspired by Angular and uses TypeScript as its primary language. NestJS promotes a structured and modular approach to building applications, with concepts like controllers, services, modules, and decorators for organizing code in a scalable and maintainable way. It provides built-in support for features like dependency injection, middleware, guards, and modern technologies like GraphQL and WebSockets. With strong typing and enhanced tooling support provided by TypeScript, NestJS offers improved developer productivity and code quality. It has a growing community of developers and comprehensive documentation covering everything from getting started to advanced topics like testing and deployment.</p>
                     </div>

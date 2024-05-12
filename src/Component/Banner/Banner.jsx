@@ -5,6 +5,7 @@ import { Slide } from "react-awesome-reveal";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { Link } from "react-router-dom";
 
 
 const Banner = () => {
@@ -30,11 +31,11 @@ const Banner = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <div className=' bg-cover bg-center min-h-screen' style={{ backgroundImage: "url('https://i.ibb.co/WPHyFrZ/slider0.jpg')" }}>
-                        <div className='bg-black min-h-screen bg-opacity-60'>
+                    <div className=' bg-cover bg-center min-h-screen' style={{ backgroundImage: "url('https://i.ibb.co/R4LG4jN/austin-distel-rxp-Th-Owu-Vg-E-unsplash.jpg')" }}>
+                        <div className='bg-black min-h-screen bg-opacity-70'>
                             <Slide>
                                 <div className='lg:pt-44 pt-36'>
-                                    <h2 className='text-[#FFFFFF] text-center w-5/6 lg:w-4/6 mx-auto text-3xl lg:text-6xl font-bold' >Find The Right Job For You  <span className='text-[#A1662F]'><Typewriter
+                                    <h2 className='text-[#FFFFFF] text-center w-5/6 lg:w-4/6 mx-auto text-3xl lg:text-6xl font-bold lg:mt-10 mt-0' >Find The Right Job For You  <span className='text-[#A1662F]'><Typewriter
                                         words={['Right Away!!']}
                                         loop={30}
                                         cursor
@@ -45,19 +46,22 @@ const Banner = () => {
                                         onLoopDone={handleDone}
                                         onType={handleType}
                                     /></span></h2>
-                                    <p className='text-[#FFFFFF] text-center lg:w-9/12 w-10/12 mx-auto text-base lg:text-xl font-semibold mt-5'>Discover exquisite handcrafted jute and wood creations, blending natural elements with artisanal expertise for timeless elegance in home decor.</p>
+                                    <p className='text-[#FFFFFF] text-center lg:w-9/12 w-10/12 mx-auto text-base lg:text-xl font-semibold mt-5'>Discover your dream career with ease! Browse through our curated job listings and apply seamlessly. Your next opportunity awaits.</p>
+                                    <div className="text-center mt-16">
+                                        <Link to='/alljobs' className="btn btn-primary">View All Jobs</Link>
+                                    </div>
                                 </div>
                             </Slide>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className=' bg-cover bg-center min-h-screen' style={{ backgroundImage: "url('https://i.ibb.co/rsf6zVL/slider1.jpg')" }}>
+                    <div className=' bg-cover bg-center min-h-screen' style={{ backgroundImage: "url('https://i.ibb.co/KyZtH5Z/annie-spratt-h-Cb3l-IB8-L8-E-unsplash.jpg')" }}>
                         <div className='bg-black min-h-screen bg-opacity-60'>
                             <Slide>
                                 <div className='pt-48'>
-                                    <h2 className='text-[#FFFFFF] text-center w-5/6 lg:w-4/6 mx-auto text-3xl lg:text-6xl font-bold'>Do not just dream it. <span className='text-[#8b4513]'><Typewriter
-                                        words={['Make it..']}
+                                    <h2 className='text-[#FFFFFF] text-center w-5/6 lg:w-4/6 mx-auto text-3xl lg:text-6xl font-bold lg:mt-7 mt-0'>We always Support you to <span className='text-[#8b4513]'><Typewriter
+                                        words={['Find A Job']}
                                         loop={30}
                                         cursor
                                         cursorStyle='_'
@@ -67,19 +71,22 @@ const Banner = () => {
                                         onLoopDone={handleDone}
                                         onType={handleType}
                                     /></span></h2>
-                                    <p className='text-[#FFFFFF] text-center lg:w-9/12 w-10/12 mx-auto text-base lg:text-xl font-semibold mt-9'>Transform your aspirations into reality with our exquisite jute and wood crafts, embodying creativity, sustainability, and timeless elegance.</p>
+                                    <p className='text-[#FFFFFF] text-center lg:w-9/12 w-10/12 mx-auto text-base lg:text-xl font-semibold mt-9'>Discover countless job opportunities tailored for you. We are dedicated to empowering your career journey with personalized support and seamless job applications.</p>
+                                    <div className="text-center mt-16">
+                                        <Link to='/alljobs' className="btn btn-primary">View All Jobs</Link>
+                                    </div>
                                 </div>
                             </Slide>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className=' bg-cover bg-center min-h-screen' style={{ backgroundImage: "url('https://i.ibb.co/H2x1D8S/slider3.jpg')" }}>
-                        <div className='bg-black min-h-screen bg-opacity-60'>
+                    <div className=' bg-cover bg-center min-h-screen' style={{ backgroundImage: "url('https://i.ibb.co/bLnfGf4/candidates-waiting-job-interview.jpg')" }}>
+                        <div className='bg-black min-h-screen bg-opacity-65'>
                             <Slide>
                                 <div className='pt-44'>
-                                    <h2 className='text-[#FFFFFF] text-center w-5/6 lg:w-4/6 mx-auto text-3xl lg:text-6xl font-bold'>Turning Dreams into <span className='text-[#a0522d]'><Typewriter
-                                        words={['Artisanal Reality..']}
+                                    <h2 className='text-[#FFFFFF] text-center w-5/6 lg:w-4/6 mx-auto text-3xl lg:text-6xl font-bold lg:mt-7 mt-0'>Explore limitless job opportunities <span className='text-[#a0522d]'><Typewriter
+                                        words={['Today!']}
                                         loop={30}
                                         cursor
                                         cursorStyle='_'
@@ -89,7 +96,10 @@ const Banner = () => {
                                         onLoopDone={handleDone}
                                         onType={handleType}
                                     /></span></h2>
-                                    <p className='text-[#FFFFFF] text-center lg:w-9/12 w-10/12 mx-auto text-base lg:text-xl font-semibold mt-8'>From dreams to handcrafted wonders, witness the magic of jute and wood craftsmanship in our artisanal collection.</p>
+                                    <p className='text-[#FFFFFF] text-center lg:w-9/12 w-10/12 mx-auto text-base lg:text-xl font-semibold mt-8'>Dive into endless career possibilities! Discover, apply, and unlock your dream job. Your next career move starts here. Explore now!</p>
+                                    <div className="text-center mt-16">
+                                        <Link to='/alljobs' className="btn btn-primary">View All Jobs</Link>
+                                    </div>
                                 </div>
                             </Slide>
                         </div>
