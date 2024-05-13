@@ -1,8 +1,11 @@
+import { Helmet } from "react-helmet-async";
 
 const AppliedJob = () => {
     return (
         <div>
-            <h1>hhhhhhhhh</h1>
+            <Helmet>
+                <title>Kajer khoj | appliedjob</title>
+            </Helmet>
         </div>
     );
 };
