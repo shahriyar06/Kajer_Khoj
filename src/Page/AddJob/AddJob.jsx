@@ -26,12 +26,13 @@ const AddJob = () => {
         const description = form.description.value;
         const salaryrange = form.salaryrange.value;
         const jobapplicants = form.jobapplicants.value;
+        const address = form.address.value;
+        const experience = form.experience.value;
         const jobpostdate = startDate;
         const applicationdeadline = deadlineDate;
 
-        const jobPost = { name, email, jobtitle, jobcategory, imageurl, description, salaryrange, jobapplicants, jobpostdate, applicationdeadline }
+        const jobPost = { name, email, jobtitle, jobcategory, imageurl, description, salaryrange, jobapplicants, jobpostdate, applicationdeadline, experience, address }
 
-        // console.log(jobPost)
         // set data to server
         fetch('http://localhost:5000/joblist', {
             method: 'POST',
@@ -163,6 +164,21 @@ const AddJob = () => {
                                             className="lg:w-[430px] md:w-[300px] rounded-lg h-12 border-b-2 border-b-[#ffffffa7] bg-transparent text-[#080808] items-center text-center flex"
                                         />
                                     </div>
+                                </div>
+                            </div>
+                            {/* Experience and Address */}
+                            <div className="md:flex gap-6 justify-between">
+                                <div className="w-full">
+                                    <label className="label">
+                                        <span className="label-text text-lg font-medium text-white">Address</span>
+                                    </label>
+                                    <input type="Text" name="address" placeholder="Address" className="input  w-full border-b-2 border-b-[#ffffffa7] bg-transparent placeholder-[#080808]" required />
+                                </div>
+                                <div className="w-full">
+                                    <label className="label">
+                                        <span className="label-text text-lg font-medium text-white">Experience</span>
+                                    </label>
+                                    <input type="Text" name="experience" placeholder="Experience" className="input  w-full border-b-2 border-b-[#ffffffa7] bg-transparent placeholder-[#080808]" required />
                                 </div>
                             </div>
                             <div className="w-full my-10">
