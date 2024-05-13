@@ -24,10 +24,11 @@ const Navbar = () => {
         <li><NavLink to='/' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Home</NavLink></li>
         <li><NavLink to='/alljobs' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>All Jobs</NavLink></li>
         <li><NavLink to='/blogs' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Blogs</NavLink></li>
-        <li><NavLink to='/addjob' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Add Job</NavLink></li>
-        {/* {
-            user && <li><NavLink to='/addcraft' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Add Craft</NavLink></li>
-        } */}
+        <li><NavLink to='/addjob' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Add A Job</NavLink></li>
+        {
+            user && <><li><NavLink to='/myjobs' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>My Jobs</NavLink></li>
+            <li><NavLink to='/appliedjob' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Applied Job</NavLink></li> </>
+        }
     </>
     return (
         <div className="lg:w-11/12 mx-auto mt-3">

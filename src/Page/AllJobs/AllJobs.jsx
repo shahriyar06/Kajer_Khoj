@@ -43,16 +43,16 @@ const AllJobs = () => {
                                         <p>{alljobs.name}</p>
                                     </td>
                                     <td className="p-3">
-                                        <p>{alljobs.jobpostdate}</p>
+                                        <p>{alljobs.jobpostdate.slice(0,10)}</p>
                                     </td>
                                     <td className="p-3">
-                                        <p>{alljobs.applicationdeadline}</p>
+                                        <p>{alljobs.applicationdeadline.slice(0,10)}</p>
                                     </td>
                                     <td className="p-3">
                                         <p>$ {alljobs.salaryrange}</p>
                                     </td>
                                     <td className="p-3 ">
-                                        <Link className="btn btn-primary">Details</Link>
+                                        <Link to={`/jobdetails/${alljobs._id}`} className="btn btn-primary">Details</Link>
                                     </td>
                                 </tr>)
                             }

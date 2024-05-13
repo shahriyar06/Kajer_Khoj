@@ -8,6 +8,10 @@ import Login from "../Component/Login/Login";
 import Register from "../Component/Register/Register";
 import PrivateRoute from "../Page/PrivateRoute/PrivateRoute";
 import AddJob from "../Page/AddJob/AddJob";
+import Myjobs from "../Page/Myjobs/Myjobs";
+import JobDetails from "../Page/JobDetails/JobDetails";
+import AppliedJob from "../Page/AppliedJob/AppliedJob";
+import Profile from "../Page/Profile/Profile";
 
 
 
@@ -41,6 +45,23 @@ const router = createBrowserRouter([
         {
             path: '/addjob',
             element: <PrivateRoute><AddJob></AddJob></PrivateRoute>
+        },
+        {
+            path: '/myjobs',
+            element: <PrivateRoute><Myjobs></Myjobs></PrivateRoute>,
+            loader: () => fetch('http://localhost:5000/joblist')
+        },
+        {
+            path: '/jobdetails/:id',
+            element: <PrivateRoute><JobDetails></JobDetails></PrivateRoute>
+        },
+        {
+            path: '/appliedjob',
+            element: <PrivateRoute><AppliedJob></AppliedJob></PrivateRoute>
+        },
+        {
+            path: '/profile',
+            element: <PrivateRoute><Profile></Profile></PrivateRoute>
         }
       ],
     },
