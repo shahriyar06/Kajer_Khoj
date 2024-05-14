@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Page/FirebaseProvider/FirebaseProvider";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const Applymodal = () => {
@@ -27,6 +28,7 @@ const Applymodal = () => {
         const address = jobdetaillist.address;
         const experience = jobdetaillist.experience;
         const applicationdeadline = jobdetaillist.applicationdeadline;
+        const jobapplicants = parseInt(jobdetaillist.jobapplicants) + 1;
 
         const appliedjob = { name, email, image, contact, gender, resumeurl, jobtitle, jobcategory, imageurl, description, salaryrange, applicationdeadline, experience, address }
         
@@ -52,10 +54,29 @@ const Applymodal = () => {
                 }
             })
 
+         // update applicants database
+
+
+         fetch(`http://localhost:5000/joblist/${jobdetaillist._id}`,{
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(jobapplicants)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+
+
     }
 
     return (
         <div>
+            <Helmet>
+                <title>Kajer khoj | apply</title>
+            </Helmet>
             <div className="my-6">
                 <form onSubmit={handleSubmit} className="w-9/12 mx-auto bg-[#cff7f0ba] p-4 rounded-2xl">
                     <h1 className="text-4xl font-semibold text-center">{jobtitle}</h1>
