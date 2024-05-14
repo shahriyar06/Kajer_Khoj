@@ -30,7 +30,7 @@ const Applymodal = () => {
         const applicationdeadline = jobdetaillist.applicationdeadline;
         const jobapplicants = parseInt(jobdetaillist.jobapplicants) + 1;
 
-        const appliedjob = { name, email, image, contact, gender, resumeurl, jobtitle, jobcategory, imageurl, description, salaryrange, applicationdeadline, experience, address }
+        const appliedjob = { name, email, image, contact, gender, resumeurl, jobtitle, jobcategory, imageurl, description, salaryrange, applicationdeadline, experience, address, jobapplicants }
         
         // set data to server
         fetch('https://kajer-khoj-server.vercel.app/applylist', {
@@ -62,7 +62,7 @@ const Applymodal = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(jobapplicants)
+            body: JSON.stringify(appliedjob)
         })
         .then(res => res.json())
         .then(data => {

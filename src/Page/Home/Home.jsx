@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Banner from "../../Component/Banner/Banner";
 import JobCategory from "../../Component/JobCategory/JobCategory";
+import CarrierInfo from "../../Component/CarrierInfo/CarrierInfo";
 
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
             </Helmet>
             <Banner></Banner>
             <JobCategory></JobCategory>
+            <CarrierInfo></CarrierInfo>
         </div>
     );
 };
