@@ -1,15 +1,32 @@
+import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { BiSolidShoppingBag } from "react-icons/bi";
 import { FaRegCalendarAlt, FaRegMoneyBillAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import { AuthContext } from "../FirebaseProvider/FirebaseProvider";
 
 
 const JobDetails = () => {
     const jobdetail = useLoaderData();
+    const { user } = useContext(AuthContext);
     const { id } = useParams();
     const jobdetaillist = jobdetail?.find(detaillist => detaillist._id === id);
     const { name, email, jobtitle, jobcategory, imageurl, description, salaryrange, jobapplicants, jobpostdate, applicationdeadline, experience, address } = jobdetaillist;
+
+    const handleApplyClick = () => {
+        // Check if the deadline has passed
+        const currentDate = new Date();
+        if (currentDate > applicationdeadline) {
+            alert("Deadline for applying to this job has passed.");
+            return;
+        }
+        // Check if the user is the employer
+        if (user.email === email) {
+            alert("Employer cannot apply for their own job.");
+            return;
+        }
+    };
 
     return (
         <div className="my-6">
@@ -40,14 +57,14 @@ const JobDetails = () => {
                             <h2 className="flex items-center gap-3 text-lg"><IoLocationSharp className="text-2xl text-[#ff51008d]" />{address}</h2>
                         </div>
                         <div className="flex gap-7">
-                                    <div className="text-2xl font-medium"><h1>Author :</h1></div>
-                                    <div className="text-lg mt-11">
-                                        <h1><span className="font-medium">Name :  </span>{name}</h1>
-                                        <h1><span className="font-medium">Email :  </span>{email}</h1>
-                                    </div>
-                                </div>
+                            <div className="text-2xl font-medium"><h1>Author :</h1></div>
+                            <div className="text-lg mt-11">
+                                <h1><span className="font-medium">Name :  </span>{name}</h1>
+                                <h1><span className="font-medium">Email :  </span>{email}</h1>
+                            </div>
+                        </div>
                         <div className="text-end pr-5">
-                            <Link className="btn btn-accent text-xl text-white">Apply</Link>
+                            <Link to={`/applyedjob/${id}`} className="btn btn-accent text-xl text-white"><button onClick={handleApplyClick}>Apply</button></Link>
                         </div>
                     </div>
                 </div>

@@ -13,6 +13,7 @@ import JobDetails from "../Page/JobDetails/JobDetails";
 import AppliedJob from "../Page/AppliedJob/AppliedJob";
 import Profile from "../Page/Profile/Profile";
 import UpdateJobs from "../Page/UpdateJobs/UpdateJobs";
+import Applymodal from "../Component/Applymodal/Applymodal";
 
 
 
@@ -68,6 +69,11 @@ const router = createBrowserRouter([
             {
                 path: '/updatejob/:id',
                 element: <PrivateRoute><UpdateJobs></UpdateJobs></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://kajer-khoj-server.vercel.app/joblist/${params.id}`)
+            },
+            {
+                path: '/applyedjob/:id',
+                element: <PrivateRoute><Applymodal></Applymodal></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://kajer-khoj-server.vercel.app/joblist/${params.id}`)
             }
         ],
