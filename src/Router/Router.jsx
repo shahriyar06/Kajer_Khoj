@@ -18,60 +18,60 @@ import UpdateJobs from "../Page/UpdateJobs/UpdateJobs";
 
 const router = createBrowserRouter([
     {
-      path: "/",
-      element: <Root></Root>,
-      errorElement: <Error></Error>,
-      children: [
-        {
-            path: '/',
-            element: <Home></Home>
-        },
-        {
-            path: '/alljobs',
-            element: <AllJobs></AllJobs>,
-            loader: () => fetch('http://localhost:5000/joblist')
-        },
-        {
-            path: '/blogs',
-            element: <Blogs></Blogs>
-        },
-        {
-            path: '/login',
-            element: <Login></Login>
-        },
-        {
-            path: '/register',
-            element: <Register></Register>
-        },
-        {
-            path: '/addjob',
-            element: <PrivateRoute><AddJob></AddJob></PrivateRoute>
-        },
-        {
-            path: '/myjobs',
-            element: <PrivateRoute><Myjobs></Myjobs></PrivateRoute>,
-            loader: () => fetch('http://localhost:5000/joblist')
-        },
-        {
-            path: '/jobdetails/:id',
-            element: <PrivateRoute><JobDetails></JobDetails></PrivateRoute>,
-            loader: () => fetch('http://localhost:5000/joblist')
-        },
-        {
-            path: '/appliedjob',
-            element: <PrivateRoute><AppliedJob></AppliedJob></PrivateRoute>
-        },
-        {
-            path: '/profile',
-            element: <PrivateRoute><Profile></Profile></PrivateRoute>
-        },
-        {
-            path: '/updatejob/:id',
-            element: <PrivateRoute><UpdateJobs></UpdateJobs></PrivateRoute>,
-            loader: ({params}) => fetch(`http://localhost:5000/joblist/${params.id}`)
-        }
-      ],
+        path: "/",
+        element: <Root></Root>,
+        errorElement: <Error></Error>,
+        children: [
+            {
+                path: '/',
+                element: <Home></Home>
+            },
+            {
+                path: '/alljobs',
+                element: <AllJobs></AllJobs>,
+                loader: () => fetch('https://kajer-khoj-server.vercel.app/joblist')
+            },
+            {
+                path: '/blogs',
+                element: <Blogs></Blogs>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
+            },
+            {
+                path: '/addjob',
+                element: <PrivateRoute><AddJob></AddJob></PrivateRoute>
+            },
+            {
+                path: '/myjobs',
+                element: <PrivateRoute><Myjobs></Myjobs></PrivateRoute>,
+                loader: () => fetch('https://kajer-khoj-server.vercel.app/joblist')
+            },
+            {
+                path: '/jobdetails/:id',
+                element: <PrivateRoute><JobDetails></JobDetails></PrivateRoute>,
+                loader: () => fetch('https://kajer-khoj-server.vercel.app/joblist')
+            },
+            {
+                path: '/appliedjob',
+                element: <PrivateRoute><AppliedJob></AppliedJob></PrivateRoute>
+            },
+            {
+                path: '/profile',
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>
+            },
+            {
+                path: '/updatejob/:id',
+                element: <PrivateRoute><UpdateJobs></UpdateJobs></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://kajer-khoj-server.vercel.app/joblist/${params.id}`)
+            }
+        ],
     },
-  ]);
+]);
 
-  export default router;
+export default router;

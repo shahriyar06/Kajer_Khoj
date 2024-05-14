@@ -27,7 +27,7 @@ const UpdateJobs = () => {
         const Updatejob = { jobtitle, jobcategory, imageurl, description, salaryrange, applicationdeadline, experience, address }
 
         // set data to server
-        fetch(`http://localhost:5000/joblist/${_id}`, {
+        fetch(`https://kajer-khoj-server.vercel.app/joblist/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -40,7 +40,7 @@ const UpdateJobs = () => {
                     Swal.fire({
                         position: "middle-center",
                         icon: "success",
-                        title: "Your work has been saved",
+                        title: "Your Update has been saved",
                         showConfirmButton: false,
                         timer: 1500
                     });

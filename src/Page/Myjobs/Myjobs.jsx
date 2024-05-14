@@ -10,7 +10,7 @@ const Myjobs = () => {
     const [alljoblist, setalljoblist] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/joblist')
+        fetch('https://kajer-khoj-server.vercel.app/joblist')
             .then(res => res.json())
             .then(data => {
                 setalljoblist(data)
@@ -31,7 +31,7 @@ const Myjobs = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/joblist/${_id}`, {
+                fetch(`https://kajer-khoj-server.vercel.app/joblist/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

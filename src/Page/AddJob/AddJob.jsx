@@ -34,7 +34,7 @@ const AddJob = () => {
         const jobPost = { name, email, jobtitle, jobcategory, imageurl, description, salaryrange, jobapplicants, jobpostdate, applicationdeadline, experience, address }
 
         // set data to server
-        fetch('http://localhost:5000/joblist', {
+        fetch('https://kajer-khoj-server.vercel.app/joblist', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
