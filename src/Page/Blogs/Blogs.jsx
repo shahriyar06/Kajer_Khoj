@@ -65,6 +65,18 @@ const Blogs = () => {
                     <img src="https://i.ibb.co/85MbcTG/images1.jpg" className="rounded-3xl w-full" alt="" />
                 </div>
             </div>
+            <div className="flex gap-7 items-center mb-20">
+                <div className="text-lg w-1/2">
+                    <div>
+                        <h1 className="text-3xl font-semibold mb-4">My Code :</h1>
+                        <p className="mb-6">
+                            My code sets up a Node.js Express server to handle requests related to a job listing and application system. It connects to a MongoDB database to perform CRUD operations on two collections: jobs and apply. Endpoints are defined for retrieving, creating, updating, and deleting job listings and applications. The server utilizes middleware like CORS for handling cross-origin requests and parses JSON data. It also includes error handling and logging. Overall, the code establishes a RESTful API for managing job-related data and interacts with a MongoDB database to store and retrieve job listings and applications.</p>
+                    </div>
+                </div>
+                <div className="rounded-full flex-grow w-1/2">
+                    <img src="https://i.ibb.co/4FGGpb1/christopher-gower-m-HRf-Lhg-ABo-unsplash.jpg" className="rounded-3xl w-full" alt="" />
+                </div>
+            </div>
         </div>
     );
 };

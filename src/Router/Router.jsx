@@ -61,7 +61,7 @@ const router = createBrowserRouter([
             {
                 path: '/appliedjob',
                 element: <PrivateRoute><AppliedJob></AppliedJob></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/applylist')
+                loader: () => fetch('https://kajer-khoj-server.vercel.app/applylist')
             },
             {
                 path: '/profile',

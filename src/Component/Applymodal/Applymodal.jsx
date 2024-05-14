@@ -33,7 +33,7 @@ const Applymodal = () => {
         const appliedjob = { name, email, image, contact, gender, resumeurl, jobtitle, jobcategory, imageurl, description, salaryrange, applicationdeadline, experience, address }
         
         // set data to server
-        fetch('http://localhost:5000/applylist', {
+        fetch('https://kajer-khoj-server.vercel.app/applylist', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -57,7 +57,7 @@ const Applymodal = () => {
          // update applicants database
 
 
-         fetch(`http://localhost:5000/joblist/${jobdetaillist._id}`,{
+         fetch(`https://kajer-khoj-server.vercel.app/joblist/${jobdetaillist._id}`,{
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

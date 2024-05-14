@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 
 const AppliedJob = () => {
     const Applylist = useLoaderData();
-    const { _id, name, email, image, contact, gender, jobtitle, jobcategory } = Applylist;
+    
     return (
         <div className="w-10/12 mx-auto my-6">
             <Helmet>
