@@ -2,10 +2,13 @@ import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 
+
 const AppliedJob = () => {
     const Applylist = useLoaderData();
-    const [Categoryselect, setCategoryselect] = useState("");
+    
 
+    const [Categoryselect, setCategoryselect] = useState("");
+    
     const filteredApplylist = Categoryselect === "" ? Applylist : Applylist.filter(apply => apply.jobcategory === Categoryselect);
 
     return (

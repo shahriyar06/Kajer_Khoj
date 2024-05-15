@@ -42,7 +42,8 @@ const Navbar = () => {
                             {Navbar}
                         </ul>
                     </div>
-                    <a className="lg:text-5xl text-lg font-extrabold text-[#ad9773]">Kajer Khoj</a>
+                    {/* <a className="lg:text-5xl text-lg font-extrabold text-[#ad9773]">Kajer Khoj</a> */}
+                    <img src="https://i.ibb.co/YRvYjqY/kajer-Khoj.png" className="w-32 md:w-full" alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-lg">

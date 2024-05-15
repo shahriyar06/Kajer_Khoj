@@ -59,7 +59,7 @@ const Myjobs = () => {
             <Helmet>
                 <title>Kajer khoj | myjobs</title>
             </Helmet>
-            <div className="w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="w-11/12 mx-auto grid grid-cols-1  lg:grid-cols-2 gap-4">
                 {
                     allmyJobs.map(myJobslist => <MyjobPostlist myJobslist={myJobslist} key={myJobslist._id} handledelete={handledelete}></MyjobPostlist>
                 )
