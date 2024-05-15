@@ -7,7 +7,7 @@ const Blogs = () => {
             <Helmet>
                 <title>Kajer khoj | blogs</title>
             </Helmet>
-            <div className="flex gap-7 items-center mb-14">
+            <div className="lg:flex gap-7 items-center mb-14">
                 <div className="text-lg">
                     <div>
                         <h1 className="text-3xl font-semibold mb-4">Access Token :</h1>
@@ -25,8 +25,8 @@ const Blogs = () => {
             <div>
                 <h1 className="text-center text-4xl font-bold mb-8">They work and where should we store them on the client side</h1>
             </div>
-            <div className="flex flex-row-reverse gap-6 items-center mb-20">
-                <div className="text-lg w-7/12">
+            <div className="lg:flex flex-row-reverse gap-6 items-center mb-20">
+                <div className="text-lg lg:w-7/12">
                     <div>
                         <h1 className="text-3xl font-semibold mb-4">Access Token :</h1>
                         <p className="mb-6">These are typically stored in memory or in a secure storage mechanism such as browser cookies or HTML5 Web Storage (localStorage or sessionStorage). Storing them securely is important to prevent unauthorized access.</p>
@@ -37,43 +37,43 @@ const Blogs = () => {
                         <p className="">These should be stored securely, preferably in a location with limited access such as HTTP-only cookies or secure browser storage. Storing refresh tokens in localStorage is generally discouraged due to potential security risks associated with cross-site scripting (XSS) attacks.</p>
                     </div>
                 </div>
-                <div className="rounded-full flex-grow w-5/12">
+                <div className="rounded-full flex-grow lg:w-5/12">
                     <img src="https://i.ibb.co/HTfgvwt/token.png" className="rounded-3xl" alt="" />
                 </div>
             </div>
-            <div className="flex gap-7 items-center mb-20">
-                <div className="text-lg w-1/2">
+            <div className="lg:flex gap-7 items-center mb-20">
+                <div className="text-lg lg:w-1/2">
                     <div>
                         <h1 className="text-3xl font-semibold mb-4">Express JS :</h1>
                         <p className="mb-6">
                             Express.js is a minimalist web application framework for Node.js, offering a robust set of features for building web servers and APIs. It is lightweight and unopinionated, giving developers flexibility and control over their applications architecture and design choices. With middleware functions at its core, Express.js allows developers to handle tasks such as logging, authentication, and error handling efficiently. It provides a simple and intuitive API for defining routes and handling HTTP requests, along with support for integrating various template engines for dynamically generating HTML content. Express.js has a large and active community of developers, along with a vast ecosystem of middleware and extensions, making it a popular choice for building web applications and APIs in the Node.js ecosystem.</p>
                     </div>
                 </div>
-                <div className="rounded-full flex-grow w-1/2">
+                <div className="rounded-full flex-grow lg:w-1/2">
                     <img src="https://i.ibb.co/hf3KcVB/images.jpg" className="rounded-3xl w-full" alt="" />
                 </div>
             </div>
-            <div className="flex gap-7 flex-row-reverse items-center mb-20">
-                <div className="text-lg w-1/2">
+            <div className="lg:flex gap-7 flex-row-reverse items-center mb-20">
+                <div className="text-lg lg:w-1/2">
                     <div>
                         <h1 className="text-3xl font-semibold mb-4">Nest JS :</h1>
                         <p className="mb-6">
                             NestJS is a progressive Node.js framework for building efficient, reliable, and scalable server-side applications. It is heavily inspired by Angular and uses TypeScript as its primary language. NestJS promotes a structured and modular approach to building applications, with concepts like controllers, services, modules, and decorators for organizing code in a scalable and maintainable way. It provides built-in support for features like dependency injection, middleware, guards, and modern technologies like GraphQL and WebSockets. With strong typing and enhanced tooling support provided by TypeScript, NestJS offers improved developer productivity and code quality. It has a growing community of developers and comprehensive documentation covering everything from getting started to advanced topics like testing and deployment.</p>
                     </div>
                 </div>
-                <div className="rounded-full flex-grow w-1/2">
+                <div className="rounded-full flex-grow lg:w-1/2">
                     <img src="https://i.ibb.co/85MbcTG/images1.jpg" className="rounded-3xl w-full" alt="" />
                 </div>
             </div>
-            <div className="flex gap-7 items-center mb-20">
-                <div className="text-lg w-1/2">
+            <div className="lg:flex gap-7 items-center mb-20">
+                <div className="text-lg lg:w-1/2">
                     <div>
                         <h1 className="text-3xl font-semibold mb-4">My Code :</h1>
                         <p className="mb-6">
                             My code sets up a Node.js Express server to handle requests related to a job listing and application system. It connects to a MongoDB database to perform CRUD operations on two collections: jobs and apply. Endpoints are defined for retrieving, creating, updating, and deleting job listings and applications. The server utilizes middleware like CORS for handling cross-origin requests and parses JSON data. It also includes error handling and logging. Overall, the code establishes a RESTful API for managing job-related data and interacts with a MongoDB database to store and retrieve job listings and applications.</p>
                     </div>
                 </div>
-                <div className="rounded-full flex-grow w-1/2">
+                <div className="rounded-full flex-grow lg:w-1/2">
                     <img src="https://i.ibb.co/4FGGpb1/christopher-gower-m-HRf-Lhg-ABo-unsplash.jpg" className="rounded-3xl w-full" alt="" />
                 </div>
             </div>

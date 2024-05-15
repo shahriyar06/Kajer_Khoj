@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 // import { ToastContainer, toast } from 'react-toastify';
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { AuthContext } from "../../Page/FirebaseProvider/FirebaseProvider";
+import Swal from "sweetalert2";
 
 
 const Register = () => {
@@ -43,6 +44,13 @@ const Register = () => {
                 updateuserprofile(name, photo)
                     .then(() => {
                         navigate(go)
+                        Swal.fire({
+                            position: "middle-center",
+                            icon: "success",
+                            title: "Register Successfully.",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
 
                         // data.target.reset();
                         // form.reset();
@@ -107,7 +115,7 @@ const Register = () => {
                             </div>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-outline text-[#947351] hover:text-[#FFFFFF] hover:bg-[#947351] hover:border-[#947351] text-lg">Register</button>
+                            <button className="btn btn-outline text-[#34ffdd] hover:text-[#FFFFFF] hover:bg-[#34ffdd] hover:border-[#34ffdd] text-lg">Register</button>
                             {/* <ToastContainer /> */}
                         </div>
                         <div className="mt-5">

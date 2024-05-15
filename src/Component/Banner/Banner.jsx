@@ -48,7 +48,7 @@ const Banner = () => {
                                     /></span></h2>
                                     <p className='text-[#FFFFFF] text-center lg:w-9/12 w-10/12 mx-auto text-base lg:text-xl font-semibold mt-5'>Discover your dream career with ease! Browse through our curated job listings and apply seamlessly. Your next opportunity awaits.</p>
                                     <div className="text-center mt-16">
-                                        <Link to='/alljobs' className="btn btn-primary">View All Jobs</Link>
+                                        <Link to='/alljobs' className="btn bg-[#34ffdd]">View All Jobs</Link>
                                     </div>
                                 </div>
                             </Slide>
@@ -73,7 +73,7 @@ const Banner = () => {
                                     /></span></h2>
                                     <p className='text-[#FFFFFF] text-center lg:w-9/12 w-10/12 mx-auto text-base lg:text-xl font-semibold mt-9'>Discover countless job opportunities tailored for you. We are dedicated to empowering your career journey with personalized support and seamless job applications.</p>
                                     <div className="text-center mt-16">
-                                        <Link to='/alljobs' className="btn btn-primary">View All Jobs</Link>
+                                        <Link to='/alljobs' className="btn bg-[#34ffdd]">View All Jobs</Link>
                                     </div>
                                 </div>
                             </Slide>
@@ -98,7 +98,7 @@ const Banner = () => {
                                     /></span></h2>
                                     <p className='text-[#FFFFFF] text-center lg:w-9/12 w-10/12 mx-auto text-base lg:text-xl font-semibold mt-8'>Dive into endless career possibilities! Discover, apply, and unlock your dream job. Your next career move starts here. Explore now!</p>
                                     <div className="text-center mt-16">
-                                        <Link to='/alljobs' className="btn btn-primary">View All Jobs</Link>
+                                        <Link to='/alljobs' className="btn bg-[#34ffdd]">View All Jobs</Link>
                                     </div>
                                 </div>
                             </Slide>

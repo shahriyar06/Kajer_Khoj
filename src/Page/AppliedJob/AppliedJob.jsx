@@ -23,7 +23,7 @@ const AppliedJob = () => {
                     <option value="Part-Time">Part-Time</option>
                 </select>
             </div>
-            <div className="grid grid-cols-3 gap-7">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                 {
                     filteredApplylist.map(apply => <div key={apply._id}><div className=" rounded-md shadow-xl bg-gray-50 text-gray-800">
                         <img src={apply.image} alt="" className=" w-full rounded-t-md h-72 bg-gray-500" />

@@ -12,7 +12,7 @@ const MyjobPostlist = ({ myJobslist, handledelete }) => {
 
     return (
         <div>
-            <div className="grid grid-cols-7 gap-6 rounded-2xl shadow-lg p-3 items-center">
+            <div className="grid md:grid-cols-7 gap-6 rounded-2xl shadow-lg p-3 items-center">
                 <div className=" col-span-3">
                     <img src={imageurl} alt="" className="rounded-xl h-56" />
                 </div>
@@ -24,7 +24,7 @@ const MyjobPostlist = ({ myJobslist, handledelete }) => {
                     <h2 className="flex items-center gap-3 text-lg"><FaRegCalendarAlt className="text-2xl" /><span className="font-medium">Deadline :</span> {applicationdeadline.slice(0, 10)}</h2>
                     <h2 className="flex items-center gap-3 text-lg"><IoLocationSharp className="text-2xl text-[#ff51008d]" />{address}</h2>
                 </div>
-                <div className="col-span-1 flex flex-col gap-4">
+                <div className="col-span-1 flex md:flex-col gap-4">
                     <Link to={`/jobdetails/${_id}`} className="btn btn-outline btn-accent hover:text-white">Details</Link>
                     <Link to={`/updatejob/${_id}`} className="btn btn-outline btn-accent"><FaPen className="text-xl hover:text-white" />
                     </Link>

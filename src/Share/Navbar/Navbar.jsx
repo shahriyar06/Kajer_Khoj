@@ -21,13 +21,13 @@ const Navbar = () => {
     }
 
     const Navbar = <>
-        <li><NavLink to='/' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Home</NavLink></li>
-        <li><NavLink to='/alljobs' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>All Jobs</NavLink></li>
-        <li><NavLink to='/blogs' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Blogs</NavLink></li>
-        <li><NavLink to='/addjob' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Add A Job</NavLink></li>
+        <li><NavLink to='/' className={({ isActive }) => isActive ? "border-[#34ffdd] border text-[#34ffdd]" : "text-[#131313]"}>Home</NavLink></li>
+        <li><NavLink to='/alljobs' className={({ isActive }) => isActive ? "border-[#34ffdd] border text-[#34ffdd]" : "text-[#131313]"}>All Jobs</NavLink></li>
+        <li><NavLink to='/blogs' className={({ isActive }) => isActive ? "border-[#34ffdd] border text-[#34ffdd]" : "text-[#131313]"}>Blogs</NavLink></li>
+        <li><NavLink to='/addjob' className={({ isActive }) => isActive ? "border-[#34ffdd] border text-[#34ffdd]" : "text-[#131313]"}>Add A Job</NavLink></li>
         {
-            user && <><li><NavLink to='/myjobs' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>My Jobs</NavLink></li>
-            <li><NavLink to='/appliedjob' className={({ isActive }) => isActive ? "border-[#ad9773] border text-[#ad9773]" : "text-[#131313]"}>Applied Job</NavLink></li> </>
+            user && <><li><NavLink to='/myjobs' className={({ isActive }) => isActive ? "border-[#34ffdd] border text-[#34ffdd]" : "text-[#131313]"}>My Jobs</NavLink></li>
+            <li><NavLink to='/appliedjob' className={({ isActive }) => isActive ? "border-[#34ffdd] border text-[#34ffdd]" : "text-[#131313]"}>Applied Job</NavLink></li> </>
         }
     </>
     return (
@@ -88,8 +88,8 @@ const Navbar = () => {
                                         </div>
                                     </summary>
                                     <ul className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-32  md:text-lg absolute z-10">
-                                        <li className="hover:text-[#f05431da]"><Link to={'/profile'}>Profile</Link></li>
-                                        <li className="hover:text-[#f05431da]" onClick={() => handlesociallogout(signout)}><Link>Logout</Link></li>
+                                        <li className="hover:text-[#34ffdd]"><Link to={'/profile'}>Profile</Link></li>
+                                        <li className="hover:text-[#34ffdd]" onClick={() => handlesociallogout(signout)}><Link>Logout</Link></li>
                                     </ul>
                                 </details>
                                 
@@ -98,13 +98,13 @@ const Navbar = () => {
                             <div className="relative">
                                 <details className="dropdown">
                                     <summary className="m-1 btn bg-transparent border-transparent hover:bg-transparent hover:border-transparent">
-                                        <div className="p-2 bg-[#f05431da] border-2 rounded-full tooltip" data-tip="Login">
+                                        <div className="p-2 bg-[#34ffdd] border-2 rounded-full tooltip" data-tip="Login">
                                             <BsPerson className="text-3xl text-[#FFFFFF]" />
                                         </div>
                                     </summary>
                                     <ul className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-32 lg:text-lg absolute z-10">
-                                        <li><Link to='/login' className=" hover:text-[#f05431da]">Log In</Link></li>
-                                        <li><Link to='/register' className="hover:text-[#f05431da]">Register</Link></li>
+                                        <li><Link to='/login' className=" hover:text-[#34ffdd]">Log In</Link></li>
+                                        <li><Link to='/register' className="hover:text-[#34ffdd]">Register</Link></li>
                                     </ul>
                                 </details>
                             </div>

@@ -110,7 +110,7 @@ const UpdateJobs = () => {
                                     placeholder={applicationdeadline}
                                     selected={deadlineDate}
                                     onChange={(date) => setdeadlineDate(date)}
-                                    className="lg:w-[430px] md:w-[300px] rounded-lg h-12 border-b-2 border-b-[#080808] dark:border-b-[#ffffffa7] bg-transparent text-[#080808] items-center text-center flex"
+                                    className="lg:w-[430px] md:w-[300px] w-[235px] rounded-lg h-12 border-b-2 border-b-[#080808] dark:border-b-[#ffffffa7] bg-transparent text-[#080808] items-center text-center flex"
                                 />
                             </div>
                         </div>

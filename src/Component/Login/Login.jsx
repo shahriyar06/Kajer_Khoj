@@ -5,6 +5,7 @@ import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Page/FirebaseProvider/FirebaseProvider";
 import Sociallogin from "../Sociallogin/Sociallogin";
+import Swal from "sweetalert2";
 
 const Login = () => {
 
@@ -21,6 +22,13 @@ const Login = () => {
             .then(result => {
                 if (result.user) {
                     navigate(from)
+                    Swal.fire({
+                        position: "middle-center",
+                        icon: "success",
+                        title: "Login Successfully.",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
                 }
             })
             .catch((error) => {
@@ -70,7 +78,7 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-outline text-[#947351] hover:text-[#FFFFFF] hover:bg-[#947351] hover:border-[#947351] text-lg">Login</button>
+                            <button className="btn btn-outline text-[#34ffdd] hover:text-[#FFFFFF] hover:bg-[#34ffdd] hover:border-[#34ffdd] text-lg">Login</button>
                         </div>
                         <div className="mt-5">
                             <div className="flex items-center">

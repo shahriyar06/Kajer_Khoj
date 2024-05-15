@@ -3,11 +3,14 @@ import Banner from "../../Component/Banner/Banner";
 import JobCategory from "../../Component/JobCategory/JobCategory";
 import CarrierInfo from "../../Component/CarrierInfo/CarrierInfo";
 import Teammember from "../../Component/Teammember/Teammember";
-
+import { motion, useScroll } from "framer-motion"
+import '../../App.css'
 
 const Home = () => {
+    const { scrollYProgress } = useScroll();
     return (
         <div>
+            <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} /> 
             <Helmet>
                 <title>Kajer khoj | home</title>
             </Helmet>

@@ -63,8 +63,8 @@ const AddJob = () => {
             <Helmet>
                 <title>Kajer khoj | add job</title>
             </Helmet>
-            <div className="bg-cover bg-center p-28" style={{ backgroundImage: "url('https://i.ibb.co/CbL19DJ/annie-spratt-Qckxruozj-Rg-unsplash.jpg')" }}>
-                <div className="card card-side glass flex flex-col w-10/12 mx-auto p-12">
+            <div className="bg-cover bg-center lg:p-28  md:p-16 p-7" style={{ backgroundImage: "url('https://i.ibb.co/CbL19DJ/annie-spratt-Qckxruozj-Rg-unsplash.jpg')" }}>
+                <div className="card card-side glass flex flex-col lg:w-10/12 md:11/12  mx-auto p-12">
                     <div>
                         <h1 className="text-center lg:text-5xl text-3xl font-bold text-[#a7542dc7]">Add Job</h1>
                         <p className="text-center my-5 text-xl w-11/12 mx-auto">Post new job opportunities on our platform! Reach potential candidates and grow your team effortlessly. Join us in shaping careers today.</p>
@@ -147,7 +147,7 @@ const AddJob = () => {
                                         <DatePicker
                                             selected={startDate}
                                             onChange={(date) => setStartDate(date)}
-                                            className="lg:w-[430px] rounded-lg h-12 border-b-2 border-b-[#ffffffa7] bg-transparent text-[#080808] items-center text-center flex"
+                                            className="lg:w-[430px] md:w-[490px] w-[230px] rounded-lg h-12 border-b-2 border-b-[#ffffffa7] bg-transparent text-[#080808] items-center text-center flex"
                                             disabled
                                         />
                                     </div>
@@ -161,7 +161,7 @@ const AddJob = () => {
                                         <DatePicker
                                             selected={deadlineDate}
                                             onChange={(date) => setdeadlineDate(date)}
-                                            className="lg:w-[430px] md:w-[300px] rounded-lg h-12 border-b-2 border-b-[#ffffffa7] bg-transparent text-[#080808] items-center text-center flex"
+                                            className="lg:w-[430px] md:w-[490px] w-[230px] rounded-lg h-12 border-b-2 border-b-[#ffffffa7] bg-transparent text-[#080808] items-center text-center flex"
                                         />
                                     </div>
                                 </div>
@@ -182,7 +182,7 @@ const AddJob = () => {
                                 </div>
                             </div>
                             <div className="w-full my-10">
-                                <button className="btn w-full text-lg bg-[#ded5c7] ">Add</button>
+                                <button className="btn w-full text-lg bg-[#34ffdd] ">Add</button>
                             </div>
                         </form>
                     </div>

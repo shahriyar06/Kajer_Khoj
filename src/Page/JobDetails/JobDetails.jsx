@@ -34,13 +34,13 @@ const JobDetails = () => {
                 <title>Kajer khoj | jobdetails</title>
             </Helmet>
             <div>
-                <div className="w-8/12 border-3xl mx-auto p-4 shadow-2xl bg-gray-50 text-gray-800">
+                <div className="lg:w-8/12 md:w-10/12  w-11/12 border-3xl mx-auto p-4 shadow-2xl bg-gray-50 text-gray-800">
                     <div className="text-end pb-4 border-bottom">
                         <h1 className="text-lg text-[#FF0000]">{jobcategory}</h1>
                     </div>
                     <div className="space-y-4">
                         <div className="space-y-2">
-                            <img src={imageurl} alt="" className="w-full rounded-md  h-[500px] cover bg-gray-500" />
+                            <img src={imageurl} alt="" className="w-full rounded-md  md:h-[500px] cover bg-gray-500" />
                         </div>
                         <div className="space-y-2">
                             <h3 className="text-xl font-semibold text-default-600">{jobtitle}</h3>
@@ -50,7 +50,7 @@ const JobDetails = () => {
                             <h2 className="flex items-center gap-3 text-lg"><span className="font-medium">Experience :</span> {experience}</h2>
                             <h2 className="flex items-center gap-3 text-lg"><FaRegMoneyBillAlt className="text-2xl text-[#00A550]" />{salaryrange}</h2>
                             <h2 className="flex items-center gap-3 text-lg"><BiSolidShoppingBag className="text-2xl text-[#7CB9E8]" /><span className="font-medium">Job Applicants :</span> {jobapplicants}</h2>
-                            <div className="flex justify-between">
+                            <div className="md:flex justify-between">
                                 <h2 className="flex items-center gap-3 text-lg"><FaRegCalendarAlt className="text-2xl" /><span className="font-medium">Post Date :</span> {jobpostdate.slice(0, 10)}</h2>
                                 <h2 className="flex items-center gap-3 text-lg"><FaRegCalendarAlt className="text-2xl" /><span className="font-medium">Deadline :</span> {applicationdeadline.slice(0, 10)}</h2>
                             </div>
