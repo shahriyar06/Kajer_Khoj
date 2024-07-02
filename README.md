@@ -3,6 +3,7 @@
 
 ## Live Links :
 - [Kajer Khoj](https://kajer-khoj.web.app/) 
+- [Server Repository](https://github.com/shahriyar06/Kajer_Khoj_Server.git) 
 
 
 
@@ -27,9 +28,24 @@ Based on the provided document, here are eight features of your website:
 
 
 
-##  Selected Category
+## Getting Started
 
-Assignment_ID: assignment_category_0003
+## Prerequisites
+- React 
+- React-router dom
+- Firebase Authentication
+- Node Js
+- Express Js 
+
+
+## Installation
+
+- [React-Router Dom](https://reactrouter.com/en/main/start/tutorial)
+- [Tailwind](https://tailwindcss.com/docs/guides/vite)
+- [Firebase](https://firebase.google.com/)
+- [React-icon](https://www.npmjs.com/package/react-icons)
+- [Swiper](https://swiperjs.com/get-started)
+- [Strip](https://docs.stripe.com/get-started)
 
 
 
